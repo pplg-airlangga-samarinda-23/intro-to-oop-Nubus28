@@ -1,10 +1,28 @@
 <?php
 class Waktu
 {
-    // deklarasikan atribut sesuai ditentukan buku
+    // Deklarasikan atribut sesuai ditentukan buku
+    public $jam;
+    public $menit;
+    public $detik;
 
-    // deklarasikan metode sesuai yang diminta buku
+    public function getJam() {
+        return $this->jam;
+    }
+    
+    public function getMinut() {
+        return $this->menit;
+    }
+    
+    public function getDetik() {
+        return $this->detik;
+    }
+    // Deklarasikan metode sesuai yang diminta buku
+    // ... (jika ada metode lain yang didefinisikan)
 }
 
-$contoh = new Waktu(15,34,50);
-echo "Sekarang pukul".$contoh->jam.":".$contoh->menit.":".$contoh->detik."<br>"; //output: Sekarang pukul 15:34:50
+$contoh = new Waktu(15, 34, 50);
+
+// Menampilkan waktu menggunakan getter
+echo "Sekarang pukul " . $contoh->getJam() . ":" . $contoh->getMinut() . ":" . $contoh->getDetik() . "<br>";
+?>
